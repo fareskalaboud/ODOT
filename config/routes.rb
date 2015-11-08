@@ -1,6 +1,8 @@
 Odot::Application.routes.draw do
   # The scaffold made this for us.
-  resources :todo_lists
+  resources :todo_lists do 
+    resources :todo_items  
+  end
 
   root "todo_lists#index"
   
