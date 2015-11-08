@@ -2158,3 +2158,123 @@ Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-08 11:26:02 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-08 11:26:02 +0000
+
+
+Started POST "/todo_lists" for 127.0.0.1 at 2015-11-08 13:04:26 +0000
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vDRz/V3jtIeVhSyL/0OfmZVnUlalspgjrB25w6dDxt0=", "todo_list"=>{"title"=>"Work to do", "description"=>"This is another list."}, "commit"=>"Create Todo list"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.4ms)[0m  INSERT INTO "todo_lists" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sun, 08 Nov 2015 13:04:26 UTC +00:00], ["description", "This is another list."], ["title", "Work to do"], ["updated_at", Sun, 08 Nov 2015 13:04:26 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/todo_lists/2
+Completed 302 Found in 19ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/todo_lists/2" for 127.0.0.1 at 2015-11-08 13:04:26 +0000
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered todo_lists/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-08 13:04:26 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-11-08 13:04:26 +0000
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2015-11-08 13:04:26 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-08 13:04:26 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-08 13:04:26 +0000
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2015-11-08 13:04:26 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-08 13:04:26 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-08 13:04:26 +0000
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-11-08 13:04:27 +0000
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-08 13:05:37 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-11-08 13:05:37 +0000
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2015-11-08 13:05:37 +0000
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-11-08 13:05:41 +0000
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-08 13:05:41 +0000
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2015-11-08 13:05:41 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-11-08 13:05:41 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-08 13:05:41 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-08 13:05:41 +0000
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2015-11-08 13:05:41 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-08 13:05:41 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-08 13:05:41 +0000
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-11-08 14:48:53 +0000
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.5ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-08 14:48:53 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-11-08 14:48:53 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-08 14:48:53 +0000
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2015-11-08 14:48:53 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-08 14:48:53 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-08 14:48:53 +0000
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2015-11-08 14:48:53 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-08 14:48:53 +0000
