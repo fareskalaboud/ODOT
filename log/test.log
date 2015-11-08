@@ -340,3 +340,165 @@ Processing by TodoListsController#index as HTML
   Rendered todo_lists/index.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/todo_lists" for 127.0.0.1 at 2015-11-08 12:27:13 +0000
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.5ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 48ms (Views: 36.3ms | ActiveRecord: 0.5ms)
+Started GET "/todo_lists/new" for 127.0.0.1 at 2015-11-08 12:27:13 +0000
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (15.7ms)
+  Rendered todo_lists/new.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+Started POST "/todo_lists" for 127.0.0.1 at 2015-11-08 12:27:13 +0000
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "todo_list"=>{"title"=>"My todo list", "description"=>"This is what I'm doing today"}, "commit"=>"Create Todo list"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (4.3ms)[0m  [1mINSERT INTO "todo_lists" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sun, 08 Nov 2015 12:27:13 UTC +00:00], ["description", "This is what I'm doing today"], ["title", "My todo list"], ["updated_at", Sun, 08 Nov 2015 12:27:13 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/todo_lists/1
+Completed 302 Found in 8ms (ActiveRecord: 4.4ms)
+Started GET "/todo_lists/1" for 127.0.0.1 at 2015-11-08 12:27:13 +0000
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered todo_lists/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "todo_lists"
+Started GET "/todo_lists" for 127.0.0.1 at 2015-11-08 12:27:13 +0000
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+Started GET "/todo_lists/new" for 127.0.0.1 at 2015-11-08 12:27:13 +0000
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (2.0ms)
+  Rendered todo_lists/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/todo_lists" for 127.0.0.1 at 2015-11-08 12:27:13 +0000
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "todo_list"=>{"title"=>"", "description"=>"This is what I'm doing today"}, "commit"=>"Create Todo list"}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered todo_lists/_form.html.erb (2.8ms)
+  Rendered todo_lists/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "todo_lists"
+Started GET "/todo_lists" for 127.0.0.1 at 2015-11-08 12:27:13 +0000
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "todo_lists"
+Started GET "/todo_lists" for 127.0.0.1 at 2015-11-08 12:27:13 +0000
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.0ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+Started GET "/todo_lists/new" for 127.0.0.1 at 2015-11-08 12:27:13 +0000
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (1.3ms)
+  Rendered todo_lists/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started POST "/todo_lists" for 127.0.0.1 at 2015-11-08 12:27:13 +0000
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "todo_list"=>{"title"=>"Hi", "description"=>"This is what I'm doing today"}, "commit"=>"Create Todo list"}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_lists" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sun, 08 Nov 2015 12:27:13 UTC +00:00], ["description", "This is what I'm doing today"], ["title", "Hi"], ["updated_at", Sun, 08 Nov 2015 12:27:13 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/todo_lists/1
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/todo_lists/1" for 127.0.0.1 at 2015-11-08 12:27:13 +0000
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered todo_lists/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_lists"[0m
+Started GET "/todo_lists" for 127.0.0.1 at 2015-11-08 12:28:14 +0000
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 29ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+Started GET "/todo_lists/new" for 127.0.0.1 at 2015-11-08 12:28:14 +0000
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (12.8ms)
+  Rendered todo_lists/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+Started POST "/todo_lists" for 127.0.0.1 at 2015-11-08 12:28:14 +0000
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "todo_list"=>{"title"=>"Hi", "description"=>"This is what I'm doing today"}, "commit"=>"Create Todo list"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered todo_lists/_form.html.erb (3.4ms)
+  Rendered todo_lists/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_lists"[0m
+Started GET "/todo_lists" for 127.0.0.1 at 2015-11-08 12:28:14 +0000
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_lists"[0m
+Started GET "/todo_lists" for 127.0.0.1 at 2015-11-08 12:28:14 +0000
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+Started GET "/todo_lists/new" for 127.0.0.1 at 2015-11-08 12:28:14 +0000
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (1.3ms)
+  Rendered todo_lists/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started POST "/todo_lists" for 127.0.0.1 at 2015-11-08 12:28:14 +0000
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "todo_list"=>{"title"=>"", "description"=>"This is what I'm doing today"}, "commit"=>"Create Todo list"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered todo_lists/_form.html.erb (2.9ms)
+  Rendered todo_lists/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_lists"[0m
+Started GET "/todo_lists" for 127.0.0.1 at 2015-11-08 12:28:14 +0000
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/todo_lists" for 127.0.0.1 at 2015-11-08 12:28:14 +0000
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+Started GET "/todo_lists/new" for 127.0.0.1 at 2015-11-08 12:28:14 +0000
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (1.4ms)
+  Rendered todo_lists/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started POST "/todo_lists" for 127.0.0.1 at 2015-11-08 12:28:14 +0000
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "todo_list"=>{"title"=>"My todo list", "description"=>"This is what I'm doing today"}, "commit"=>"Create Todo list"}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (3.2ms)[0m  [1mINSERT INTO "todo_lists" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sun, 08 Nov 2015 12:28:14 UTC +00:00], ["description", "This is what I'm doing today"], ["title", "My todo list"], ["updated_at", Sun, 08 Nov 2015 12:28:14 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/todo_lists/1
+Completed 302 Found in 6ms (ActiveRecord: 3.3ms)
+Started GET "/todo_lists/1" for 127.0.0.1 at 2015-11-08 12:28:14 +0000
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered todo_lists/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.8ms)[0m  rollback transaction
